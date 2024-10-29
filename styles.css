@@ -20,10 +20,11 @@ body, html {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     z-index: -1; /* Ensure the video is behind other content */
     pointer-events: none; /* Allows clicks to pass through */
+    bottom: ;
 }
 
 video {
@@ -31,7 +32,7 @@ video {
     top: 50%;
     left: 50%;
     min-width: 100%; /* Minimum width */
-    min-height: 100%; /* Minimum height */
+    min-height: 100vh; /* Minimum height */
     width: auto; /* Width auto for aspect ratio */
     height: 100vh; /* Height auto for aspect ratio */
     transform: translate(-50%, -50%); /* Center the video */
@@ -41,10 +42,10 @@ video {
 .overlay {
     position: absolute; /* Position the overlay */
    
-    bottom:-8px;
+    bottom:-1vw;
     left: 0;
     width: 100%; /* Full width */
-    height: 29vh; /* Full height */
+    height: 30vh; /* Full height */
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 33, 0));;
     /*background-color: linear-gradient(rgb(0, 0, 0,0.37), rgb(255, 255, 255,0.037));*/
     /*background-color: rgba(0, 0, 0, 0.37); /* Dark overlay */
@@ -69,10 +70,11 @@ video {
     color: white; /* Text color for contrast */
     text-align: center; /* Center the text */
     padding: 20px;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between; /* Distribute space evenly */
-    height: 100vh; /* Full height to space items */
+    justify-content: space-between; /* Distribute space evenly */
+    height: 90vh; /* Full height to space items */
 }
 
 
@@ -195,7 +197,7 @@ a:hover {
 .button {
     display: inline-block; /* Make it behave like a button */
     padding: 10px 20px; /* Padding for the button */
-    font-size: 27px; /* Font size */
+    /* Font size */
     color: white; /* Text color */
     background-color: #005700; /* Button background color */
     text-decoration: none; /* Remove underline */
@@ -210,11 +212,11 @@ a:hover {
 }
 
 .content p {
-    margin-top: 25%; /* Adjust this value to move the text further down */
-    align-items: center;
-    font-size: 8vw;
+    margin: 0%; /* Adjust this value to move the text further down */
+    align-self: flex-end;
+    font-size: 7vw;
     font-family: "Playfair Display", serif;
-    
+    margin-bottom: 70px;
 }
 
 .about-us {
@@ -224,7 +226,7 @@ a:hover {
     text-align: center; /* Center the text */
     padding: 15.0%; /* Add some padding */
     background-color: rgb(0, 33, 0); /* Optional: background for readability */
-    margin-top: -250px; /* Space between video and about section */
+    margin-top: 0px; /* Space between video and about section */
     font-family:'Playfair Display', serif;
     /*height: 40vh;*/
 }
@@ -374,6 +376,7 @@ p {
 
 footer p{
     color: white;
+    font-size: 3vw;
 }
 
 .decorative-box {
@@ -390,8 +393,7 @@ footer p{
     width: 92vw; /* Set a width for the box */
     height: 75vh;
     float: left; /* Align the box to the left */
-    margin-top: 40px;
-    margin-left: 25px;
+
 }
 
 .team-intro{
@@ -403,7 +405,7 @@ footer p{
     opacity: 0; /* Initially hidden */
     transition: opacity 1s ease; /* Smooth transition */
     position: relative; /* Ensure it's positioned properly */
-    top: 100px; /* Position it as needed */
+    top: 0; /* Position it as needed */
 }
 .scroll-text.visible {
     opacity: 1; /* Make it visible */
@@ -519,7 +521,8 @@ h1 {
     }
 
     #hamburger {
-        padding: 20px;
+        padding-top: 20px;
+        padding-left: 5vw;
         display: block; /* Show hamburger */
     }
 

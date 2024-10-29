@@ -250,7 +250,7 @@ p {
     align-items: center;
     height: 100%;
     position: relative; /* Positioning context for the link */
-    height: 200px; /* Ensure it fills the pr-box */
+    height: 15vw; /* Ensure it fills the pr-box */
     transition: transform 0.5s ease; /* Smooth image transition */
 }
 
@@ -284,7 +284,7 @@ p {
     color: #003300; /* Change text color */
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-   
+   font-size: 2vw;
 }
 
 .pr-box:hover .link {
@@ -389,7 +389,7 @@ footer{
 
 .carousel-item img {
     width: 100%; /* Responsive images */
-    height: 170px; /* Maintain aspect ratio */
+    height: 14vw; /* Maintain aspect ratio */
 
 }
 
