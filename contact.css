@@ -60,7 +60,7 @@ h1{
     font-family: "Playfair Display", serif;
     font-size: 75px;
     margin-left: 30px;
-    margin-top: 320px;
+    margin-top: 37vh;
 }
 
 .content p{
@@ -83,4 +83,5 @@ h1{
 .contact-container a:hover{
     color:#3d5e3d ;
  }
+
 
