@@ -1,11 +1,6 @@
 /* styles.css */
 
 
-
-a:hover {
-    color: #e20000;
-}
-
 .container {
     width: 80%;
     margin: auto;
@@ -38,7 +33,7 @@ video {
     min-width: 100%; /* Minimum width */
     min-height: 100%; /* Minimum height */
     width: auto; /* Width auto for aspect ratio */
-    height: 100%; /* Height auto for aspect ratio */
+    height: 100vh; /* Height auto for aspect ratio */
     transform: translate(-50%, -50%); /* Center the video */
     object-fit: cover; /* Ensures the video covers the entire background */
 }
@@ -48,7 +43,7 @@ video {
     top: 637px;
     left: 0;
     width: 100%; /* Full width */
-    height: 28%; /* Full height */
+    height: 29vh; /* Full height */
     background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 33, 0));;
     /*background-color: linear-gradient(rgb(0, 0, 0,0.37), rgb(255, 255, 255,0.037));*/
     /*background-color: rgba(0, 0, 0, 0.37); /* Dark overlay */
@@ -99,7 +94,7 @@ video {
     top: 5%; /* Adjust as needed */
     left: 2%; /* Center horizontally */
     transform: translate(0%, 0%); /* Center adjustment */
-    width: 300px; /* Adjust width */
+    width: 25vw; /* Adjust width */
     height: auto; /* Maintain aspect ratio */
     z-index: 4; /* Ensure it's above the background */
     cursor: pointer; /* Changes cursor to indicate it's clickable */
@@ -119,7 +114,6 @@ header {
     align-items: center; /* Center items vertically */
     padding: 10px; /* Adjust padding as needed */
     position: relative;
-    
     /*
     flex: 1; /* Allows header to take available space */
     /*
@@ -132,6 +126,7 @@ header {
 }
 
 
+
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -139,6 +134,7 @@ header {
   font-weight: lighter;
   font-style: normal;
 }
+
 
 nav ul {
     list-style: none;
@@ -152,6 +148,7 @@ nav ul {
 
 nav ul li {
     margin: 0 20px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav ul li a {
@@ -164,13 +161,24 @@ nav ul li a:hover {
     color: #dbdbdb;
 }
 
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: row; /* Stack nav items vertically */
+        width: 100%; /* Full width for nav items */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between items */
+    }
+}
+
 a {
     color: white;
-    text-decoration: none;
-    font-weight: 1;
-}
-a-green {
-    color: #003300;
     text-decoration: none;
     font-weight: 1;
 }
@@ -205,6 +213,7 @@ a:hover {
     align-items: center;
     font-size: 77px;
     font-family: "Playfair Display", serif;
+    
 }
 
 .about-us {
@@ -235,7 +244,7 @@ a:hover {
     font-size: 25px; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
     font-family: "Montserrat", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .our-team {
@@ -270,6 +279,10 @@ a:hover {
     max-width: 100%; /* Make images responsive */
     width: auto;
     height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+}
+.our-team img:hover {
+    transform: scale(1.1); 
 }
 
 .our-team ul li {
@@ -300,7 +313,15 @@ a:hover {
     font-family:'Playfair Display', serif;
 }
 
+.news a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
 
+.news a:hover {
+    color: #003300;
+}
 
 .contact {
     position: relative; /* Position relative to allow for spacing */
@@ -314,13 +335,23 @@ a:hover {
     padding-bottom: 300px;
 }
 
+.contact a {
+    color: #005700;
+    text-decoration: none;
+    font-weight: 1;
+}
+
+.contact a:hover {
+    color: #003300;
+}
+
 footer {
     background-color: #003300;
     text-align: left;
     padding: 20px;
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: auto;
     font-size: 0.9em;
     font-family: "Playfair Display", serif;
 
@@ -337,6 +368,11 @@ p {
     position: relative;
     font-size: 25px; /* Adjust paragraph size */
     line-height: 1.5; /* Improve readability */
+    
+}
+
+footer p{
+    color: white;
 }
 
 .decorative-box {
@@ -466,3 +502,4 @@ p {
 h1 {
     margin-top: 0; /* Remove top margin for all h1 elements */
 }
+
